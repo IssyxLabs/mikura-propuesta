@@ -486,13 +486,13 @@
 
 /* ---------- LOGO INTRO ---------- */
 .logo-intro{
-  padding:clamp(1.25rem,3.5vw,2rem) 0 clamp(0.5rem,1.5vw,1rem);
+  padding:clamp(1.5rem,4vw,2.5rem) 0 clamp(0.75rem,2vw,1.25rem);
 }
 .logo-intro .wrap{
   display:flex; justify-content:center;
 }
 .logo-intro img{
   display:block;
-  height:clamp(190px, 22vw, 260px); width:auto;
+  height:clamp(380px, 44vw, 520px); width:auto;
   filter:drop-shadow(0 8px 14px rgba(46,31,23,0.2));
 }
