@@ -59,7 +59,7 @@
   }
   .brand{display:flex; align-items:center; gap:0.7rem; text-decoration:none;}
   .brand img{
-    height:58px; width:auto;
+    height:88px; width:auto;
     filter:drop-shadow(0 3px 5px rgba(46,31,23,0.2));
   }
 
@@ -326,7 +326,7 @@
     border-bottom:1px solid rgba(255,248,235,0.15);
   }
   .footer-brand{display:flex; align-items:center; gap:0.9rem;}
-  .footer-brand img{height:58px; width:auto;}
+  .footer-brand img{height:76px; width:auto;}
   .footer-brand span{display:block; font-family:'Karla'; font-weight:400; font-size:0.82rem; color:rgba(255,248,235,0.7);}
   .footer-links{display:flex; gap:1.6rem; flex-wrap:wrap;}
   .footer-links a{text-decoration:none; font-weight:600; font-size:0.92rem; color:rgba(255,248,235,0.9);}
@@ -337,6 +337,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px){
+    .brand img{height:66px;}
     nav.links{
       position:fixed; inset:64px 0 auto 0; background:var(--cream-soft);
       flex-direction:column; align-items:flex-start; padding:1.4rem clamp(1.25rem,4vw,3rem) 2rem;
@@ -390,24 +391,30 @@
 .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
 
 /* ---------- SOCIAL ICONS ---------- */
-.social-row{display:flex; align-items:center; gap:0.7rem;}
+.social-row{display:flex; align-items:center; gap:0.9rem; flex-wrap:wrap;}
 .social-icon{
   display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; border-radius:50%;
-  background:rgba(255,248,235,0.12);
-  color:var(--cream-soft);
+  width:54px; height:54px; border-radius:50%;
+  color:#fff;
   text-decoration:none;
-  transition:background 0.2s ease, transform 0.2s ease;
+  box-shadow:0 6px 14px rgba(0,0,0,0.28);
+  transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-.social-icon svg{width:19px; height:19px; fill:currentColor;}
-.social-icon:hover{background:var(--cherry); transform:translateY(-2px);}
+.social-icon svg{width:26px; height:26px; fill:currentColor;}
+.social-icon:hover{transform:translateY(-3px) scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.35);}
 .social-icon.pending{cursor:pointer;}
+.social-icon.pending:hover{filter:grayscale(0.15);}
+
+.social-icon.ig{background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);}
+.social-icon.wa{background:#25D366;}
+.social-icon.fb{background:#1877F2;}
+.social-icon.tt{background:#010101;}
+.social-icon.yt{background:#FF0000;}
 
 /* Light variant, used on the legal-page header */
 .social-row.on-cream .social-icon{
-  background:rgba(46,31,23,0.08); color:var(--cocoa);
+  color:var(--cocoa); box-shadow:0 4px 10px rgba(46,31,23,0.18);
 }
-.social-row.on-cream .social-icon:hover{background:var(--cherry); color:var(--cream-soft);}
 
 /* ---------- FOOTER LEGAL ROW ---------- */
 .footer-legal{
