@@ -337,7 +337,11 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 1080px){
-    .brand img{height:78px;}
+    .nav{padding:0.6rem 1rem;}
+    .brand img{height:58px;}
+    .social-row.small{gap:0.35rem;}
+    .social-row.small .social-icon{width:30px; height:30px;}
+    .social-row.small .social-icon svg{width:14px; height:14px;}
     nav.links{
       position:absolute; top:100%; left:0; right:0; background:var(--cream-soft);
       flex-direction:column; align-items:flex-start; padding:1.4rem clamp(1.25rem,4vw,3rem) 2rem;
