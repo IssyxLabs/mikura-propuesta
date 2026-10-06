@@ -502,6 +502,6 @@
 }
 .logo-intro img{
   display:block;
-  height:clamp(380px, 44vw, 520px); width:auto;
+  width:100%; max-width:640px; height:auto;
   filter:drop-shadow(0 8px 14px rgba(46,31,23,0.2));
 }
