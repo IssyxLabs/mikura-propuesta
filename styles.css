@@ -133,7 +133,7 @@
   .hero-art .frame{
     position:relative; z-index:1;
     width:min(400px, 84%);
-    aspect-ratio:1/1;
+    aspect-ratio:4/5;
     transform:rotate(-4deg);
     border-radius:26px;
     overflow:hidden;
@@ -204,16 +204,22 @@
   }
   .sabores .wrap{position:relative;}
   .sabores-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:1.8rem 1.8rem;
+    display:flex; flex-wrap:wrap; justify-content:center;
+    gap:1.8rem;
+    margin-bottom:3rem;
   }
+  .group-title{
+    font-size:1.5rem; margin:0 0 1.4rem;
+    display:flex; align-items:center; gap:0.9rem;
+  }
+  .group-title::after{content:''; flex:1; height:2px; background:var(--blush);}
   .flavor-card{
     margin:0; position:relative; border-radius:20px;
     box-shadow:0 16px 28px -14px rgba(46,31,23,0.38);
     border:6px solid var(--cream-soft);
-    aspect-ratio:1/1;
+    aspect-ratio:4/5;
     cursor:pointer;
+    flex:0 0 calc((100% - 3.6rem) / 3);
   }
   .flavor-card img{width:100%; height:100%; object-fit:cover;}
   .flavor-card:nth-child(odd){transform:rotate(-1.4deg);}
@@ -366,14 +372,13 @@
     .video-section .wrap{grid-template-columns:1fr;}
     .video-art{order:-1;}
 
-    .sabores-grid{grid-template-columns:1fr 1fr;}
+    .flavor-card{flex-basis:calc((100% - 1.8rem) / 2);}
 
     .visit-grid{grid-template-columns:1fr;}
   }
 
   @media (max-width: 560px){
-    .sabores-grid{grid-template-columns:1fr;}
-    .flavor-card{transform:none !important; max-width:320px; margin:0 auto;}
+    .flavor-card{flex-basis:100%; transform:none !important; max-width:340px;}
   }
 
   @media (max-width: 480px){
